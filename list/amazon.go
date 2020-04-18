@@ -1,7 +1,7 @@
 package list
 
 import (
-	"go-cidrman/util"
+	"github.com/yuanmomo/go-cidrman/util"
 )
 type Amazon struct{}
 

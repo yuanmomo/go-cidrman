@@ -2,7 +2,7 @@ package list
 
 import (
 	"fmt"
-	"go-cidrman/cidr"
+	"github.com/yuanmomo/go-cidrman/cidr"
 	"strings"
 )
 

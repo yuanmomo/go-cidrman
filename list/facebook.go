@@ -3,7 +3,7 @@ package list
 // Package is called aw
 import (
 	"fmt"
-	"go-cidrman/util"
+	"github.com/yuanmomo/go-cidrman/util"
 	"os/exec"
 	"strings"
 )

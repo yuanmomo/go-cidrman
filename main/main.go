@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-cidrman/list"
+	"github.com/yuanmomo/go-cidrman/list"
 )
 
 func main()  {
