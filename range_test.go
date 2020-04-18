@@ -1,6 +1,6 @@
 // go test -v -run="TestIPRangeToCIDRs"
 
-package cidrman
+package main
 
 import (
 	"reflect"

@@ -1,11 +1,12 @@
 // Inspired by the Python netaddr cidr_merge function
 // https://netaddr.readthedocs.io/en/latest/api.html#netaddr.cidr_merge.
 
-package cidrman
+package main
 
 import (
 	"errors"
 	"net"
+	"strings"
 )
 
 type ipNets []*net.IPNet
@@ -60,6 +61,9 @@ func MergeCIDRs(cidrs []string) ([]string, error) {
 
 	var networks []*net.IPNet
 	for _, cidr := range cidrs {
+		if len(strings.TrimSpace(cidr)) == 0{
+			continue
+		}
 		_, network, err := net.ParseCIDR(cidr)
 		if err != nil {
 			return nil, err

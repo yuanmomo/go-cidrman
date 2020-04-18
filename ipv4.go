@@ -1,4 +1,4 @@
-package cidrman
+package main
 
 import (
 	"encoding/binary"
@@ -147,6 +147,8 @@ func merge4(blocks cidrBlock4s) ([]*net.IPNet, error) {
 	for i := len(blocks) - 1; i > 0; i-- {
 		if blocks[i].first <= blocks[i-1].last+1 {
 			blocks[i-1].last = blocks[i].last
+			//fmt.Printf("last value:=[i]=%v,[i-1]=%v,[compare]=%b \n",  blocks[i].last , blocks[i-1].last, blocks[i].last >=blocks[i-1].last)
+
 			if blocks[i].first < blocks[i-1].first {
 				blocks[i-1].first = blocks[i].first
 			}
